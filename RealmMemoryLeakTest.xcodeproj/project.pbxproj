@@ -12,9 +12,11 @@
 		7DEEB4EC1C10A5A2006CD9CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DEEB4EA1C10A5A2006CD9CB /* Main.storyboard */; };
 		7DEEB4EE1C10A5A2006CD9CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DEEB4ED1C10A5A2006CD9CB /* Assets.xcassets */; };
 		7DEEB4F11C10A5A2006CD9CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DEEB4EF1C10A5A2006CD9CB /* LaunchScreen.storyboard */; };
+		BEA69FAA24A7F0472A503C3B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0AEA4DF7F0ACA4B2AA39011 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18B5DEF7194398C0F9FB1EF0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		7DEEB4E31C10A5A2006CD9CB /* RealmMemoryLeakTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmMemoryLeakTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DEEB4E61C10A5A2006CD9CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DEEB4E81C10A5A2006CD9CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		7DEEB4ED1C10A5A2006CD9CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7DEEB4F01C10A5A2006CD9CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7DEEB4F21C10A5A2006CD9CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D68EE32E0C1E69496CC9B14D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		F0AEA4DF7F0ACA4B2AA39011 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEA69FAA24A7F0472A503C3B /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30AC5E09EAE9462A4E35162B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F0AEA4DF7F0ACA4B2AA39011 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7DEEB4DA1C10A5A2006CD9CB = {
 			isa = PBXGroup;
 			children = (
 				7DEEB4E51C10A5A2006CD9CB /* RealmMemoryLeakTest */,
 				7DEEB4E41C10A5A2006CD9CB /* Products */,
+				B5E3E80AA7E3C970B37FD847 /* Pods */,
+				30AC5E09EAE9462A4E35162B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +79,15 @@
 			path = RealmMemoryLeakTest;
 			sourceTree = "<group>";
 		};
+		B5E3E80AA7E3C970B37FD847 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				18B5DEF7194398C0F9FB1EF0 /* Pods.debug.xcconfig */,
+				D68EE32E0C1E69496CC9B14D /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7DEEB4F51C10A5A2006CD9CB /* Build configuration list for PBXNativeTarget "RealmMemoryLeakTest" */;
 			buildPhases = (
+				D65931CB494F5172C9F9EC0B /* Check Pods Manifest.lock */,
 				7DEEB4DF1C10A5A2006CD9CB /* Sources */,
 				7DEEB4E01C10A5A2006CD9CB /* Frameworks */,
 				7DEEB4E11C10A5A2006CD9CB /* Resources */,
+				A2BE32B9B20911C28D786B01 /* Embed Pods Frameworks */,
+				9FB08ED7B87BEF5AFCBCF718 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9FB08ED7B87BEF5AFCBCF718 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2BE32B9B20911C28D786B01 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D65931CB494F5172C9F9EC0B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7DEEB4DF1C10A5A2006CD9CB /* Sources */ = {
@@ -245,6 +320,7 @@
 		};
 		7DEEB4F61C10A5A2006CD9CB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18B5DEF7194398C0F9FB1EF0 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RealmMemoryLeakTest/Info.plist;
@@ -256,6 +332,7 @@
 		};
 		7DEEB4F71C10A5A2006CD9CB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D68EE32E0C1E69496CC9B14D /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RealmMemoryLeakTest/Info.plist;
@@ -284,6 +361,7 @@
 				7DEEB4F71C10A5A2006CD9CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
